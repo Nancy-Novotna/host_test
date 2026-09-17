@@ -8,19 +8,19 @@ on:
 
 jobs:
     deploy:
-        name: Deploy to nanca.infinityfree.com
-            runs-on: ubuntu-latest
+        name: Deploy to infinityfree
+        runs-on: ubuntu-latest
 
-            steps:
-                - name: Checkout code
-                uses: actions/checkout@v3
-    
-                - name: Deploy to nanca.infinityfree.com
-                uses: SamKirkland/FTP-Deploy-Action@4.0.0
-                with:
-                    server: ftpupload.net
-                    username: ${{ secrets.FTP_USERNAME }}
-                    password: ${{ secrets.FTP_PASSWORD }}
-                    server-dir: /htdocs/
-                    retries: 3
-                    retryDelay: 10
+        steps:
+            - name: Checkout code
+            uses: actions/checkout@v3
+
+            - name: Deploy to nanca.infinityfree.com
+            uses: SamKirkland/FTP-Deploy-Action@4.0.0
+            with:
+                server: ftpupload.net
+                username: ${{ secrets.FTP_USERNAME }}
+                password: ${{ secrets.FTP_PASSWORD }}
+                server-dir: /htdocs/
+                retries: 3
+                retryDelay: 10
