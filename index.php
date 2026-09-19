@@ -1,5 +1,5 @@
 <?php
-    require_once 'host_test/database.php';
+    require_once 'database.php';
 ?>
 
 <!DOCTYPE html>
