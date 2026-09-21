@@ -1,5 +1,5 @@
 <?php
-    require_once 'database.php';
+require_once 'database.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
 <body>
     <div>
         <h1>Hello, World!</h1>
-        <input type="button" value="Click Me" onclick="window.location.href='pageOne.html'">
+        <input type="button" value="Click Me" onclick="window.location.href='pageOne.html'"> <br>
 
         <?php
         $sql = "SELECT * FROM names;";
@@ -25,7 +25,7 @@
 
         if ($resultCheck > 0) {
             while ($row = mysqli_fetch_assoc($results)) {
-                echo $row['name'] . "<br>";
+                echo "<h1>" . $row['name'] . "<h1>" . "<br>";
             }
         }
 
