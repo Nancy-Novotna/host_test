@@ -21,7 +21,8 @@ if ($_SERVER['SERVER_NAME'] === 'localhost') {
     $user = 'root';
     $password = '';
     $database = 'names';
-} else {
+}
+if ($_SERVER['SERVER_NAME'] === 'sql307.infinityfree.com') {
     // InfinityFree
     $host = 'sql307.infinityfree.com';
     $user = 'if0_42921101';

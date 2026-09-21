@@ -16,8 +16,8 @@ require_once 'database.php';
 <body>
     <div>
         <h1>Hello, World!</h1>
-        <input type="button" value="Click Me" onclick="window.location.href='pageOne.html'"> <br>
-
+        <input type="button" value="Click Me" onclick="window.location.href='pageOne.html'">
+        <br>
         <?php
         $sql = "SELECT * FROM names;";
         $results = mysqli_query($conn, $sql);
@@ -25,7 +25,8 @@ require_once 'database.php';
 
         if ($resultCheck > 0) {
             while ($row = mysqli_fetch_assoc($results)) {
-                echo "<h1>" . $row['name'] . "<h1>" . "<br>";
+                echo $row['name'] . " ";
+                echo $row["surname"] ."<br>";
             }
         }
 
