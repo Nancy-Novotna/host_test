@@ -6,10 +6,10 @@ $dbName = "if0_42921101_test";
 $dbUsername = "if0_42921101";
 $dbPassword = "hostWebovky654";
 
-$db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+$conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
 
-if ($conn->connect_error) {
-    die("Chyba připojení: " . $conn->connect_error);
+if (!$conn) {
+    die("Chyba připojení: " . mysqli_connect_error());
 }
 
 // try {
